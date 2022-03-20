@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Edit Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="background: white; position: fixed; width: 100%; z-index: 1">
+    <div class="prop-divider"></div>
+    <div class="ion-padding">
+      <ion-card class="prop-page-summary">
+        <ion-card-content>
+          <ion-row class="ion-justify-content-center">
+            <img src="assets/1.png" style="height: 60px" />
+          </ion-row>
+
+          <form>
+            <ion-input placeholder="First name"></ion-input>
+            <ion-input placeholder="Last Name"></ion-input>
+
+            <ion-input placeholder="ID Number"></ion-input>
+
+            <ion-input placeholder="Email"></ion-input>
+
+            <ion-input placeholder="Phone Number"></ion-input>
+
+            <ion-select
+              interface="popover"
+              placeholder="Select tenant property"
+            >
+              <ion-select-option value="1">Complex 1</ion-select-option>
+              <ion-select-option value="2">Complex 2</ion-select-option>
+              <ion-select-option value="3">Complex 3</ion-select-option>
+            </ion-select>
+          </form>
+
+          <ion-item lines="none">
+            <ion-label>Generate Monthly Invoice</ion-label>
+            <ion-toggle slot="start" mode="ios" checked></ion-toggle>
+          </ion-item>
+
+          <ion-button expand="block"> Save</ion-button>
+
+          <div></div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

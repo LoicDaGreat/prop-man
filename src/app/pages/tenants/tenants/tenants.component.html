@@ -1,0 +1,14 @@
+<app-header-toolbar></app-header-toolbar>
+
+<ion-content>
+  <div style="position: fixed; width: 100%; z-index: 1">
+    <div class="ion-padding prop-divider">
+      <!-- <ion-searchbar showCancelButton="focus"></ion-searchbar> -->
+      <app-search-bar></app-search-bar>
+    </div>
+  </div>
+
+  <div class="ion-padding" style="margin-top: 150px">
+    <app-tenant-list [tenants]="tenants"></app-tenant-list>
+  </div>
+</ion-content>

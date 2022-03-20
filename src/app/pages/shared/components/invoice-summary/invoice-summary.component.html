@@ -1,0 +1,40 @@
+<ion-item lines="none" (click)="openInvoice()" class="prop-summary-item">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="9" class="prop-summary-title">
+        {{ invoice.propertyName }}</ion-col
+      >
+      <ion-col size="3" class="prop-summary-text">
+        <span style="float: right">R {{ invoice.amount }}</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="9" class="prop-summary-text">
+        Invoice # {{ invoice.invoiceNumber }}
+      </ion-col>
+      <ion-col size="3" class="prop-summary-text" style="font-size: 11px">
+        <span style="float: right">{{ invoice.date }}</span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col style="font-size: 11px" size="9" class="prop-summary-text">
+        {{ invoice.date }}
+      </ion-col>
+      <ion-col size="3" class="prop-summary-text">
+        <ion-badge
+          style="
+            border-radius: 12px;
+            width: 70px;
+            font-size: 10px;
+            float: right;
+          "
+          [ngStyle]="{
+            'background-color': 'green'
+          }"
+          >PAID DATE</ion-badge
+        >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>

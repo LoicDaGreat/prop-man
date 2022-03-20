@@ -1,0 +1,32 @@
+<ion-item lines="none" class="prop-summary-item" (click)="viewTicket()">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="9">
+        <div class="prop-summary-title">{{ ticket.type }}</div>
+        <div class="prop-summary-text">Electric problem</div>
+        <div class="prop-summary-text">{{ ticket.date }}</div>
+      </ion-col>
+
+      <ion-col size="3" class="ion-padding">
+        <ion-badge
+          style="border-radius: 12px; width: 70px"
+          [ngStyle]="{
+            'background-color': ticket.status === 'Open' ? 'green' : 'red'
+          }"
+          >Open</ion-badge
+        >
+      </ion-col>
+      <!-- <ion-col size="4" style="font-size: 12px"> {{ ticket.type }}</ion-col>
+      <ion-col size="4" style="font-size: 12px"> {{ ticket.status }}</ion-col>
+      <ion-col size="4" style="font-size: 12px"> {{ ticket.date }}</ion-col> -->
+    </ion-row>
+    <ion-row *ngIf="false">
+      <ion-col style="font-size: 12px" (click)="viewTicket()">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+        reprehenderit sit. Qui, veritatis, laboriosam quasi facere a consequatur
+        sequi itaque sit tempora minima voluptas, doloremque unde aperiam autem
+        adipisci ullam!
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>

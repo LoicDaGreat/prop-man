@@ -1,0 +1,71 @@
+<app-header-toolbar></app-header-toolbar>
+
+<ion-content>
+  <div style="background: white; position: fixed; width: 100%; z-index: 1">
+    <div class="ion-padding prop-divider-summary">
+      <app-search-bar></app-search-bar>
+    </div>
+    <div class="ion-no-padding">
+      <ion-card class="prop-page-summary">
+        <ion-card-header class="text-align-center">
+          <ion-card-title class="title-label"
+            >Monthly Collection</ion-card-title
+          >
+          <ion-card-subtitle class="title-value"> R8 000.00</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-row class="text-align-center">
+            <ion-col size="3" class="title-label-2" style="font-size: 10px"
+              >Total Property
+              <br />
+              <div class="title-value">2</div>
+            </ion-col>
+            <ion-col class="left-col-border"></ion-col>
+            <ion-col size="4" class="title-label-2" style="font-size: 10px">
+              Occupied Property
+              <br />
+              <div class="title-value">5</div>
+            </ion-col>
+            <ion-col class="left-col-border"></ion-col>
+
+            <ion-col size="4" class="title-label-2" style="font-size: 10px">
+              Vacant Property
+              <br />
+              <div class="title-value">2</div>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+      <ion-row>
+        <div
+          style="
+            margin-top: -26px;
+            width: 100%;
+            border-radius: 20px;
+            background: #5a8dee;
+            height: 60px;
+            text-align: center;
+            color: white;
+            padding: 12px;
+            z-index: 5;
+            font-weight: 500;
+          "
+        >
+          <div>
+            <div>MONTHLY PROPERTY MANAGEMENT FEE</div>
+            <div>R2000.00</div>
+          </div>
+        </div>
+      </ion-row>
+    </div>
+  </div>
+
+  <div style="margin-top: 300px">
+    <div style="position: fixed; background: white; height: 60px; margin: 16px">
+      Property List
+    </div>
+    <br />
+    <app-property-list [properties]="properties"></app-property-list>
+  </div>
+</ion-content>

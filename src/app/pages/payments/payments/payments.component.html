@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title> Add Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div (click)="addCard()">
+    <ion-row class="ion-padding ion-align-items-start">
+      <ion-col size="3">
+        <ion-icon
+          name="card-outline"
+          style="color: #c4c4c4; font-size: 36px"
+        ></ion-icon>
+      </ion-col>
+      <ion-col size="9">
+        <div
+          style="
+            font-weight: 500;
+            font-size: 16px;
+            color: #828d99;
+            padding: 8px 0px;
+          "
+        >
+          Credit or Debit Card
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

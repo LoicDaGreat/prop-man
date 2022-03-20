@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title> Add Card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form>
+    <ion-row>
+      <ion-input placeholder="Card Number"
+        ><ion-icon
+          name="card-outline"
+          style="padding: 12px; font-size: 36px; color: #536984"
+        ></ion-icon
+      ></ion-input>
+      <!-- <ion-col>
+        <ion-icon name="card-outline"></ion-icon> Credit or Debit Card
+      </ion-col> -->
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-input placeholder="MM/YY"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-input placeholder="CCV"></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-padding">
+      <p
+        style="
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          color: #828d99;
+        "
+      >
+        Opro may charge a small amount to confirm your card details. This is
+        immediately refunded.
+      </p>
+      <br />
+      <a>Learn More</a>
+    </ion-row>
+
+    <div>
+      <ion-button
+        expand="block"
+        style="
+          height: 40px;
+
+          background: #5a8dee;
+          box-shadow: 0px 4px 4px rgba(90, 141, 238, 0.25);
+          border-radius: 15px;
+        "
+        >Add Card</ion-button
+      >
+    </div>
+  </form>
+</ion-content>

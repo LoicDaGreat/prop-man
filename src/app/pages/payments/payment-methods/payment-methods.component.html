@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title> Payment Methods</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-radio-group allow-empty-selection value="beef">
+      <ion-item lines="none">
+        <!-- <ion-row> -->
+        <ion-col size="2">
+          <img src="/assets/visa.svg" />
+        </ion-col>
+        <ion-col>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+
+          <span
+            style="
+              color: #828d99;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 18px;
+            "
+          >
+            0000</span
+          >
+        </ion-col>
+
+        <ion-radio slot="end"></ion-radio>
+        <!-- </ion-row> -->
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <hr style="border: 1px solid #f2f4f4; height: 0px" />
+  <div
+    (click)="addPayment()"
+    style="color: #5a8dee; font-weight: 500; font-size: 12px"
+  >
+    <ion-icon name="add-outline"></ion-icon> Add payment method
+  </div>
+</ion-content>

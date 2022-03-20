@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Booking List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="position: fixed; width: 100%; z-index: 1">
+    <div class="ion-padding prop-divider">
+      <!-- <ion-searchbar showCancelButton="focus"></ion-searchbar> -->
+      <app-search-bar></app-search-bar>
+    </div>
+  </div>
+
+  <ion-virtual-scroll [items]="items" approxItemHeight="320px">
+    <app-booking-summary
+      *virtualItem="let item; let itemBounds = bounds"
+      [booking]="item"
+    ></app-booking-summary>
+  </ion-virtual-scroll>
+</ion-content>

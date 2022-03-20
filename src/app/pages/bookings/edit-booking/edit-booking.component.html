@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Event Booking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="background: white; position: fixed; width: 100%; z-index: 1">
+    <div class="prop-divider-summary">
+      <!-- <ion-searchbar showCancelButton="focus"></ion-searchbar> -->
+    </div>
+    <div class="ion-padding">
+      <ion-card class="prop-page-summary">
+        <ion-card-content>
+          <form class="ion-padding">
+            <ion-select interface="popover" placeholder="Clubhouse">
+              <ion-select-option value="clubhouse">Clubhouse</ion-select-option>
+
+              <ion-select-option value="games">Games Room</ion-select-option>
+              <ion-select-option value="tennis">Tennis court</ion-select-option>
+            </ion-select>
+
+            <div>
+              <ion-input placeholder="12/04/2021"></ion-input>
+            </div>
+
+            <div>
+              <ion-input placeholder="Start Time"></ion-input>
+            </div>
+
+            <ion-textarea placeholder="Message"></ion-textarea>
+
+            <ion-item lines="none">
+              <ion-label>All Day</ion-label>
+              <ion-toggle slot="start" mode="ios" checked></ion-toggle>
+            </ion-item>
+            <div style="font-weight: 500; font-size: 18px">Fee: R200</div>
+          </form>
+
+          <ion-button expand="block">Send Booking</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div></div>
+  </div>
+</ion-content>

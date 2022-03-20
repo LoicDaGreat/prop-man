@@ -1,0 +1,66 @@
+<app-header-toolbar></app-header-toolbar>
+
+<ion-content>
+  <div style="background: white; position: fixed; width: 100%; z-index: 1">
+    <div class="ion-padding prop-divider-summary">
+      <!-- <ion-searchbar
+        mode="ios"
+        showCancelButton="never"
+        searchIcon="none"
+      ></ion-searchbar> -->
+      <app-search-bar></app-search-bar>
+    </div>
+    <div class="ion-padding">
+      <ion-card class="prop-page-summary">
+        <ion-card-header class="text-align-center">
+          <ion-card-title class="title-label">Monthly Rent</ion-card-title>
+          <ion-card-subtitle class="title-value"> R 8000</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-row class="text-align-center">
+            <ion-col size="5" class="title-label-2"
+              >Monthly Payemnt
+              <br />
+              <div class="title-value">R 20.8 K</div>
+            </ion-col>
+            <ion-col class="left-col-border"></ion-col>
+            <ion-col size="6" class="title-label-2">
+              Penalty Fees
+              <br />
+              <div class="title-value">R 100</div>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div>
+      <ion-segment
+        style="height: 80px; background: white"
+        (ionChange)="segmentChanged($event)"
+        value="paid"
+        mode="ios"
+      >
+        <ion-segment-button value="paid" style="height: 42px">
+          <ion-label>Paid Invoices</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="unpaid" style="height: 42px">
+          <ion-label>Unpaid Invoices</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+  </div>
+
+  <div class="ion-padding">
+    <ion-virtual-scroll
+      [items]="items"
+      approxItemHeight="320px"
+      style="top: 275px"
+    >
+      <app-invoice-summary
+        *virtualItem="let item; let itemBounds = bounds"
+        [invoice]="item"
+      ></app-invoice-summary>
+    </ion-virtual-scroll>
+  </div>
+</ion-content>

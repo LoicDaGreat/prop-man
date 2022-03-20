@@ -1,0 +1,42 @@
+<app-header-toolbar></app-header-toolbar>
+
+<ion-content>
+  <div style="background: white; position: fixed; width: 100%; z-index: 1">
+    <div class="ion-padding prop-divider">
+      <app-search-bar></app-search-bar>
+    </div>
+  </div>
+  <div style="margin-top: 100px" class="ion-padding">
+    <!-- <div>Visitors List</div> -->
+    <ion-virtual-scroll [items]="items" approxItemHeight="320px">
+      <ion-item
+        *virtualItem="let item; let itemBounds = bounds"
+        class="ion-no-padding prop-summary-item"
+        lines="none"
+        class="ion-no-padding prop-summary-item"
+      >
+        <ion-grid>
+          <ion-row class="ion-no-padding">
+            <ion-col size="3" class="ion-padding">
+              <ion-icon
+                style="font-size: 36px; color: #5a8dee"
+                name="notifications"
+              ></ion-icon>
+            </ion-col>
+
+            <ion-col size="9" class="ion-no-padding">
+              <ion-row>
+                <ion-col size="6" class="prop-summary-title">Title</ion-col>
+                <ion-col class="prop-summary-text">12/04/2021</ion-col>
+              </ion-row>
+              <ion-row class="ion-no-padding prop-summary-text">
+                Lorem ipsum dolor sit amet,sit amet,sit amet, consectetur
+                adipisicing elit.
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-virtual-scroll>
+  </div>
+</ion-content>

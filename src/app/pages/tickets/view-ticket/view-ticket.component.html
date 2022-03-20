@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Ticket Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="background: white; position: fixed; width: 100%; z-index: 1">
+    <div class="prop-divider">
+      <!-- <ion-searchbar showCancelButton="focus"></ion-searchbar> -->
+    </div>
+    <div>
+      <ion-card class="top-card" style="margin-top: -80px">
+        <ion-card-content>
+          <ion-row>
+            <ion-col size="9" class="title-value"> {{ ticket.type }}</ion-col>
+            <ion-col size="3" class="title-value"> #000222</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size="9" class="title-label">
+              <div>Tenant: Jerry Khoza</div>
+              <div>12/04/2021 | 08:45</div>
+            </ion-col>
+            <ion-col size="3" style="font-size: 12px">
+              <!-- [ngStyle]="{
+                'background-color': ticket.status === 'Open' ? 'green' : 'red'
+              }" -->
+              <ion-badge
+                style="
+                  background-color: green;
+                  border-radius: 12px;
+                  width: 70px;
+                  font-size: 12px;
+                  float: right;
+                "
+                >Open</ion-badge
+              >
+            </ion-col>
+          </ion-row>
+
+          <ion-item-divider></ion-item-divider>
+          <div class="title-value">Filename</div>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="ticket-card">
+        <ion-card-content>
+          <ion-row>
+            <ion-col size="12" class="title-value"> Subject</ion-col>
+            <ion-col size="12" class="title-text"> Electric Problem</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size="12" class="title-value"> Message</ion-col>
+            <ion-col size="12" class="title-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="ticket-card">
+        <ion-card-content>
+          <div style="background: #475f7b; color: white">
+            <ion-row>
+              <ion-col size="12" class="title-value">
+                {{ ticket.type }}</ion-col
+              >
+              <!-- <ion-col size="4" class="title-value"> #000222</ion-col> -->
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="8" class="title-label">
+                <div>Staff: Shakira Shakira</div>
+                <div>12/04/2021 | 09:45</div>
+              </ion-col>
+            </ion-row>
+          </div>
+
+          <ion-row>
+            <ion-col size="12" class="title-value"> Message</ion-col>
+            <ion-col size="12" class="title-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+
+      <div style="bottom: 0; position: fixed; width: 100%">
+        <ion-button (click)="replyTicket()" expand="block">Reply</ion-button>
+      </div>
+    </div>
+  </div>
+  <!-- <div style="margin-top: 150px">
+    <ion-virtual-scroll [items]="ticketThreads" approxItemHeight="320px">
+      <app-ticket-thread
+        *virtualItem="let item; let itemBounds = bounds"
+      ></app-ticket-thread>
+    </ion-virtual-scroll>
+  </div> -->
+</ion-content>

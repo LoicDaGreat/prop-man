@@ -1,0 +1,159 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Tenant Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="background: white; position: fixed; width: 100%; z-index: 1">
+    <div class="prop-divider"></div>
+    <div class="ion-padding">
+      <ion-card class="prop-page-summary">
+        <ion-card-content class="ion-no-padding">
+          <ion-row class="ion-no-padding">
+            <ion-col size="3">
+              <img src="assets/u.png" style="height: 60px" />
+            </ion-col>
+            <ion-col size="5">
+              <div
+                style="
+                  font-weight: 500;
+                  font-size: 13px;
+                  line-height: 127%;
+                  /* or 17px */
+
+                  display: flex;
+                  align-items: flex-end;
+                  text-transform: uppercase;
+
+                  color: #475f7b;
+                "
+              >
+                {{item.Name}}
+              </div>
+              <div
+                style="
+                  font-weight: normal;
+                  font-size: 12px;
+                  line-height: 14px;
+                  display: flex;
+                  align-items: flex-end;
+                  color: #828282;
+                "
+              >
+                {{item.Email}}
+              </div>
+              <div
+                style="
+                  font-weight: normal;
+                  font-size: 12px;
+                  line-height: 14px;
+                  display: flex;
+                  align-items: flex-end;
+                  color: #828282;
+                "
+              >
+                072 434 3234
+              </div>
+            </ion-col>
+            <ion-col size="4">
+              <div style="display: flex">
+                <span style="font-size: 12px">Deactivate</span
+                ><ion-toggle
+                  mode="ios"
+                  style="height: 20px; margin-left: 12px"
+                ></ion-toggle>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <ion-row class="item-head-bg">
+            <ion-col size="12">
+              <div>
+                <ion-icon
+                  name="location-outline"
+                  style="margin: 0px 6px"
+                ></ion-icon>
+                <span>987 Qwert Street, Randburg</span>
+              </div>
+            </ion-col>
+
+            <ion-col size="12">
+              <div>
+                <ion-icon name="mail-outline" style="margin: 0px 6px"></ion-icon
+                ><span>email@example.com</span>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <ion-row class="text-align-center">
+            <ion-col size="5" class="title-label-2"
+              >Monthly Payemnt
+              <br />
+              <div class="title-value">R8K</div>
+            </ion-col>
+            <ion-col class="left-col-border"></ion-col>
+            <ion-col size="6" class="title-label-2">
+              Rent Total Fees
+              <br />
+              <div class="title-value">R20.78K</div>
+            </ion-col>
+          </ion-row>
+
+          <ion-row class="text-align-center">
+            <ion-col size="5" class="title-label-2"
+              >Total Invoice
+              <br />
+              <div class="title-value">0</div>
+            </ion-col>
+            <ion-col class="left-col-border"></ion-col>
+            <ion-col size="6" class="title-label-2">
+              Penalty fees
+              <br />
+              <div class="title-value">0</div>
+            </ion-col>
+          </ion-row>
+
+          <ion-row class="ion-padding" style="width: 100%">
+            <ion-col size="12">
+              <ion-button expand="block" (click)="editTenant()"
+                >Edit Profile</ion-button
+              >
+            </ion-col>
+
+            <ion-col size="12">
+              <ion-button expand="block">Additional Fees</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div>
+      <ion-segment (ionChange)="segmentChanged($event)" value="paid" mode="ios">
+        <ion-segment-button value="paid">
+          <ion-label>Paid Invoices</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="unpaid">
+          <ion-label>Unpaid Invoices</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+  </div>
+
+  <div>
+    <ion-virtual-scroll
+      [items]="invoices"
+      approxItemHeight="320px"
+      style="top: 275px"
+    >
+      <app-invoice-summary
+        *virtualItem="let item; let itemBounds = bounds"
+        [invoice]="item"
+      ></app-invoice-summary>
+    </ion-virtual-scroll>
+  </div>
+</ion-content>

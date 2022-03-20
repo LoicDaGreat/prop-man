@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Invoice Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="prop-divider-summary"></div>
+
+  <div class="ion-padding">
+    <ion-card class="prop-page-summary">
+      <ion-card-header>
+        <ion-card-title class="title-label-2">
+          <ion-row>
+            <ion-col size="9"> Invoice #5747474 </ion-col>
+            <ion-col> Vat # 47474</ion-col>
+          </ion-row>
+        </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content class="ion-no-padding">
+        <ion-item-divider class="item-head-bg">
+          <ion-row style="width: 100%">
+            <ion-col size="4">Date</ion-col>
+            <ion-col size="5"> Details</ion-col>
+            <ion-col size="3">Amount</ion-col>
+          </ion-row>
+        </ion-item-divider>
+
+        <ion-item-divider class="ion-no-padding;">
+          <ion-row style="width: 100%">
+            <ion-col size="4">12/12/ 2021</ion-col>
+            <ion-col size="5"> Monthly Rent</ion-col>
+            <ion-col size="3">R 8000</ion-col>
+          </ion-row>
+        </ion-item-divider>
+
+        <ion-item-divider class="ion-no-padding;">
+          <ion-row style="width: 100%">
+            <ion-col size="4">12/12/ 2021</ion-col>
+            <ion-col size="5">Penalty fee</ion-col>
+            <ion-col size="3">R 900</ion-col>
+          </ion-row>
+        </ion-item-divider>
+
+        <ion-item-divider class="ion-no-padding;">
+          <ion-row style="width: 100%">
+            <ion-col size="4">12/12/ 2021</ion-col>
+            <ion-col size="5"> Interest rate</ion-col>
+            <ion-col size="3">R 509</ion-col>
+          </ion-row>
+        </ion-item-divider>
+
+        <ion-item>
+          <ion-row style="width: 100%">
+            <ion-col size="4"></ion-col>
+            <ion-col size="5"> Tax</ion-col>
+            <ion-col size="3">15 %</ion-col>
+          </ion-row>
+        </ion-item>
+
+        <ion-item>
+          <ion-row style="width: 100%">
+            <ion-col size="4"></ion-col>
+            <ion-col size="5"> Total</ion-col>
+            <ion-col size="3">R 8 700</ion-col>
+          </ion-row>
+        </ion-item>
+      </ion-card-content>
+
+      <div>
+        <ion-button expand="block" (click)="startPayment()"> Pay</ion-button>
+        <ion-button expand="block"> Download Invoice</ion-button>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

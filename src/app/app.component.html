@@ -1,0 +1,54 @@
+<ion-app>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header style="background: white">
+      <ion-toolbar color="primary">
+        <ion-title>
+          <img src="/assets/logo.svg" style="height: 20px" />
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle routerLink="app/profile">
+          <ion-item>Profile</ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle routerLink="app/properties">
+          <ion-item>Properties</ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle routerLink="app/tenants">
+          <ion-item>Tenants</ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle routerLink="app/overview">
+          <ion-item>Invoices</ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle routerLink="app/tickets">
+          <ion-item>Tickets</ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle routerLink="app/notifications">
+          <ion-item>Notifications</ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle routerLink="app/visitors">
+          <ion-item>Visitors</ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle routerLink="app/bookings">
+          <ion-item>Bookings</ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle routerLink="app/payments">
+          <ion-item>Payments</ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item (click)="logOut()">Logout</ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

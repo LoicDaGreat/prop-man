@@ -1,0 +1,22 @@
+<div class="ion-padding">
+  <!-- <div
+    style="
+      background: white;
+      z-index: 4;
+      position: fixed;
+      top: 320px;
+      width: 100%;
+      height: 36px;
+    "
+  >
+    Property List
+  </div> -->
+  <ion-virtual-scroll [items]="properties" approxItemHeight="320px">
+    <app-property-summary
+      *virtualItem="let item; let itemBounds = bounds"
+      [property]="item"
+    >
+      ></app-property-summary
+    >
+  </ion-virtual-scroll>
+</div>

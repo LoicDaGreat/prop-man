@@ -1,0 +1,41 @@
+<app-header-toolbar></app-header-toolbar>
+<ion-content>
+  <div style="background: white; position: fixed; width: 100%; z-index: 1">
+    <div class="ion-padding prop-divider">
+      <!-- <ion-searchbar showCancelButton="focus"></ion-searchbar> -->
+      <app-search-bar></app-search-bar>
+    </div>
+    <div class="ion-padding">
+      <ion-card class="top-card">
+        <ion-card-content>
+          <ion-button expand="block" (click)="createTicket()"
+            >Open Ticket</ion-button
+          >
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div>
+      <!-- <ion-segment (ionChange)="segmentChanged($event)" value="paid" mode="ios">
+        <ion-segment-button value="paid">
+          <ion-label>Paid Invoices</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="unpaid">
+          <ion-label>Unpaid Invoices</ion-label>
+        </ion-segment-button>
+      </ion-segment> -->
+    </div>
+  </div>
+
+  <div class="ion-padding">
+    <ion-virtual-scroll
+      [items]="tickets"
+      approxItemHeight="320px"
+      style="top: 175px"
+    >
+      <app-ticket-summary
+        *virtualItem="let item; let itemBounds = bounds"
+        [ticket]="item"
+      ></app-ticket-summary>
+    </ion-virtual-scroll>
+  </div>
+</ion-content>

@@ -1,0 +1,70 @@
+<!-- <ion-searchbar
+  style="height: 60px"
+  mode="ios"
+  showCancelButton="never"
+  searchIcon="none"
+>
+</ion-searchbar>
+<ion-icon slot="end" name="search"></ion-icon> -->
+
+<ion-grid>
+  <ion-row class="ion-align-items-center" *ngIf="false">
+    <ion-col size="12" class="ion-no-padding" style="margin-right: -20px">
+      <ion-searchbar
+        style="height: 60px"
+        mode="ios"
+        showCancelButton="never"
+        searchIcon="none"
+      >
+        <ion-icon name="search"></ion-icon>
+      </ion-searchbar>
+      <!-- <span><ion-icon slot="end" name="search"></ion-icon></span> -->
+    </ion-col>
+    <ion-col class="search-btn" *ngIf="false">
+      <ion-button>
+        <ion-icon slot="end" name="search"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <div style="height: 50px; display: flex">
+    <ion-searchbar mode="ios" showCancelButton="never" searchIcon="none">
+    </ion-searchbar>
+    <ion-icon
+      name="search"
+      style="
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        margin-top: 12px;
+        margin-left: -56px;
+        background: #5a8dee;
+        color: white;
+        padding: 6px;
+      "
+    ></ion-icon>
+  </div>
+
+  <ion-row class="ion-no-padding" *ngIf="false">
+    <ion-searchbar
+      style="height: 60px"
+      mode="ios"
+      showCancelButton="never"
+      searchIcon="none"
+    >
+    </ion-searchbar>
+    <ion-icon
+      class="custom-search-icon"
+      name="search"
+      style="
+        background: #5a8dee;
+        color: white;
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        margin-top: 12px;
+        margin-left: -40px;
+      "
+    ></ion-icon>
+  </ion-row>
+</ion-grid>
